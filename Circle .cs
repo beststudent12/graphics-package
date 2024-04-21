@@ -44,12 +44,18 @@ namespace GraphicsPackage
             
             circleplotpoints(x, y, circpt);
             int k = 0;
-            richTextBox1.Text = $"{k}\n";
+           /* richTextBox1.Text = $"{k}\n";
             richTextBox2.Text = $"{p}\n";
-            richTextBox3.Text = $"({(x + circpt.getx()) - 311}, {(y + circpt.gety()) - 317}) \n";
-
+            richTextBox3.Text = $"({(x + circpt.getx()) - 321}, {(y + circpt.gety()) - 317}) \n";
+            richTextBox4.Text = $" {2 * ((x + circpt.getx()) - 321)}\n";
+            richTextBox5.Text = $" {2 * ((y + circpt.gety()) - 317)}\n";
+*/
             while (circpt.getx() < circpt.gety())
             {
+                richTextBox1.Text += $"{k}\n";
+                richTextBox2.Text += $"{p}\n";
+                richTextBox3.Text += $"({(x + circpt.getx()) - 321}";
+                richTextBox4.Text += $" {2 * ((x + circpt.getx()) - 321)}\n";
                 k++;
                 circpt.incrementx();
                 if (p < 0)
@@ -61,14 +67,13 @@ namespace GraphicsPackage
                     circpt.decrementy();
                     p += 2 * (circpt.getx() - circpt.gety()) + 1;
                 }
+                richTextBox3.Text += $", {(y + circpt.gety()) - 317}) \n";
                 circleplotpoints(x, y, circpt);
-                richTextBox1.Text += $"{k}\n";
-                richTextBox2.Text += $"{p}\n";
-                richTextBox3.Text += $"({(x + circpt.getx()) - 311}, {(y + circpt.gety()) - 317}) \n";
+                richTextBox5.Text += $" {2 * ((y + circpt.gety()) - 317)}\n";
             }
 
             
-            
+           
         }
 
         private bool HasError()
@@ -146,6 +151,11 @@ namespace GraphicsPackage
         }
 
         private void MidpointCircleAlgorithm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

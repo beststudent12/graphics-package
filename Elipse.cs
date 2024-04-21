@@ -52,14 +52,19 @@ namespace GraphicsPackage
 
             ellipsePlotPoints(x, y, ellipse);
             int k = 0;
-            p = round(ry2 - (rx2 * ry) + (0.25 * rx2));
-            richTextBox1.Text = $"{k}\n";
-            richTextBox2.Text = $"{p}\n";
-            richTextBox3.Text = $"({(x + ellipse.getX()) - 311}, {(y + ellipse.getY()) - 317}) \n";
+            p = (int)(ry2 - (rx2 * ry) + (0.25 * rx2));
+           
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+            richTextBox3.Text = "";
+            richTextBox4.Text = "";
+            richTextBox5.Text = "";
             /* Region 1 */
 
             while (px < py)
             {
+                richTextBox1.Text += $"{k}\n";
+                richTextBox2.Text += $"{p}\n";
                 k++;
                 ellipse.incrementX();
                 px += twoRy2;
@@ -72,16 +77,19 @@ namespace GraphicsPackage
                     p += ry2 + px - py;
                 }
                 ellipsePlotPoints(x, y, ellipse);
-                richTextBox1.Text += $"{k}\n";
-                richTextBox2.Text += $"{p}\n";
                 richTextBox3.Text += $"({(x + ellipse.getX()) - 311}, {(y + ellipse.getY()) - 317}) \n";
+                richTextBox4.Text += $"{twoRy2 * ((x + ellipse.getX()) - 311)}\n";
+                richTextBox5.Text += $"{twoRx2 * ((y + ellipse.getY()) - 317)}\n";
             }
 
             /* Region 2 */
 
-            p = round(ry2 * (ellipse.getX() + 0.5) * (ellipse.getX() + 0.5) + rx2 * (ellipse.getY() - 1) * (ellipse.getY() - 1) - rx2 * ry2);
+            p = (int)(ry2 * (ellipse.getX() + 0.5) * (ellipse.getX() + 0.5) + rx2 * (ellipse.getY() - 1) * (ellipse.getY() - 1) - rx2 * ry2);
+           
             while (ellipse.getY() > 0)
             {
+                richTextBox1.Text += $"{k}\n";
+                richTextBox2.Text += $"{p}\n";
                 k++;
                 ellipse.decrementY();
                 py -= twoRx2;
@@ -94,9 +102,9 @@ namespace GraphicsPackage
                     p += rx2 - py + px;
                 }
                 ellipsePlotPoints(x, y, ellipse);
-                richTextBox1.Text += $"{k}\n";
-                richTextBox2.Text += $"{p}\n";
                 richTextBox3.Text += $"({(x + ellipse.getX()) - 311}, {(y + ellipse.getY()) - 317}) \n";
+                richTextBox4.Text += $"{twoRy2 * ((x + ellipse.getX()) - 311)}\n";
+                richTextBox5.Text += $"{twoRx2 * ((y + ellipse.getY()) - 317)}\n";
             }
         }
 
@@ -171,5 +179,10 @@ namespace GraphicsPackage
         }
 
         private  int round (double a) { return (int)(a + 0.5); }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

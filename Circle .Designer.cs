@@ -42,16 +42,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circle)).BeginInit();
             this.SuspendLayout();
             // 
             // circle
             // 
             this.circle.BackColor = System.Drawing.Color.LavenderBlush;
-            this.circle.Location = new System.Drawing.Point(361, 13);
+            this.circle.Location = new System.Drawing.Point(547, 9);
             this.circle.Margin = new System.Windows.Forms.Padding(4);
             this.circle.Name = "circle";
-            this.circle.Size = new System.Drawing.Size(622, 635);
+            this.circle.Size = new System.Drawing.Size(645, 635);
             this.circle.TabIndex = 0;
             this.circle.TabStop = false;
             // 
@@ -142,7 +146,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(130, 414);
+            this.richTextBox2.Location = new System.Drawing.Point(120, 416);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(63, 229);
             this.richTextBox2.TabIndex = 9;
@@ -150,7 +154,7 @@
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(242, 414);
+            this.richTextBox3.Location = new System.Drawing.Point(225, 416);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(72, 229);
             this.richTextBox3.TabIndex = 10;
@@ -179,19 +183,60 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(247, 387);
+            this.label5.Location = new System.Drawing.Point(238, 387);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 24);
             this.label5.TabIndex = 13;
             this.label5.Text = "(X,Y)";
             // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(341, 416);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(63, 229);
+            this.richTextBox4.TabIndex = 14;
+            this.richTextBox4.Text = "";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(446, 416);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.Size = new System.Drawing.Size(63, 229);
+            this.richTextBox5.TabIndex = 15;
+            this.richTextBox5.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(354, 387);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 24);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "2Xk+1";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(459, 387);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 24);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "2Yk+1";
+            // 
             // MidpointCircleAlgorithm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(1019, 657);
+            this.ClientSize = new System.Drawing.Size(1235, 657);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox5);
+            this.Controls.Add(this.richTextBox4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -233,5 +278,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

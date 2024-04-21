@@ -1,4 +1,4 @@
-﻿using System;
+﻿/**/using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,13 +91,16 @@ namespace GraphicsPackage
                 x = x0;
                 y = y0;
             }
-            richTextBox1.Text = $"{k}\n";
-            richTextBox2.Text = $"{Dp}\n";
-            richTextBox3.Text = $"({x - 250}, {y - 250}) \n";
+            richTextBox1.Text ="";
+            richTextBox2.Text = "";
+            richTextBox3.Text = "";
             SetPixel(x, y , Color.LimeGreen);
             while (x < xEnd)
             {
                 x++;
+                richTextBox1.Text += $"{k}\n";
+                richTextBox2.Text += $"{Dp}\n";
+               
                 k++;
                 if (Dp < 0)
                     Dp += twoDy;
@@ -106,9 +109,8 @@ namespace GraphicsPackage
                     y++;
                     Dp += twoDyMinusDx;
                 }
-                richTextBox1.Text += $"{k}\n";
-                richTextBox2.Text += $"{Dp}\n";
                 richTextBox3.Text += $"({x - 250}, {y - 250}) \n";
+               
 
                 SetPixel(x, y, Color.LimeGreen);
 
